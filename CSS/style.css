@@ -1,0 +1,500 @@
+/* ========= Start Global Rules =========*/
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit
+}
+
+body {
+  height: 100vh;
+  font-family: CircularStd;
+  font-weight: 300;
+  background-image: url(../images/Background.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+}
+::-webkit-scrollbar {
+  width: 7px;
+}
+::-webkit-scrollbar-track {
+  background-color: transparent;    /* color of the scroll thumb */
+}
+::-webkit-scrollbar-thumb {
+  background-color: #72BB74;
+  border-radius: 15px;
+}
+/* ========= End Global Rules =========*/
+
+/* ========= Start Layout =========*/
+.layout {
+  background-color: #ffffff1f;
+  padding: 10px;
+  width: 100%;
+  height: calc(100vh - 80px);
+  display: grid;
+  grid-template-columns: 1fr 6fr 5fr;
+}
+/* ========= End Layout =========*/
+
+/* ========= Start Nav-bar =========*/
+nav {
+  background-color: #fff;
+  opacity: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  padding: 10px 0;
+}
+nav .logo {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+nav .logo::before {
+  content: '';
+  width: 75%;
+  height: 2.5px;
+  background-color: #F9C302;
+  position: absolute;
+  bottom: -10px;
+}
+
+nav .logo img {
+  width: 50%;
+}
+
+nav .icons {
+  height: 90%;
+  padding-top: 10px;
+  display: flex;
+  flex-direction : column;
+  align-items: center;
+  gap: 20px;
+}
+nav .icons a img {
+  width: 30px;
+}
+nav .icons a .dashboard {
+  width: 24px;
+}
+nav .contact-us {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 10%;
+}
+nav .contact-us a img {
+  width: 22px;
+}
+/* ========= End Nav-bar =========*/
+
+/* ========= Start Daily Projects =========*/
+.daily-projects {
+  background-color: #ffffff8a;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.daily-projects .search {
+  position: relative;
+}
+
+.daily-projects .search img {
+  width: 20px;
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+}
+
+.daily-projects .search input {
+  padding: 15px 25px 15px 40px;
+  border-radius: 4px;
+  background-color: #ffffff96;
+  color: #A7B1BD;
+  border: none;
+  font-size: 18px;
+  font-family: CircularStd;
+  font-weight: 500;
+}
+
+.daily-projects .search input:focus {
+  border: none;
+  outline: none;
+}
+.daily-projects .title {
+  display: flex;
+  align-items: center;
+  gap: 80px;
+}
+.daily-projects .title h2 {
+  position: relative;
+}
+.daily-projects .title h2::after {
+  content: "";
+  width: 2px;
+  height: 100%;
+  position: absolute;
+  right: -40px;
+  background-color: #FFF;
+}
+
+.daily-projects .categories {
+  display: flex;
+  gap: 25px;
+}
+.daily-projects .categories span {
+  font-size: 15px;
+  color: #656565;
+  cursor: pointer;
+}
+.daily-projects .categories span.active {
+  color: #F95702;
+  text-decoration: underline;
+}
+
+.daily-projects .projects {
+  display: flex;
+  max-height: 410px;
+  flex-direction: column;
+  gap: 20px;
+  overflow-y: scroll;
+  padding-right: 12px;
+  
+}
+.daily-projects .projects .project-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  background-image: linear-gradient(to right, #ffffffed, #ffffff8f);
+  padding: 15px 25px;
+  border-radius: 10px;
+}
+
+.daily-projects .projects .project-card .client {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.daily-projects .projects .project-card .client img {
+  width: 50px;
+  height: 50px;
+}
+.daily-projects .projects .project-card h2 {
+  font-size: 11px;
+  font-weight: 500;
+  color: #1F1F1F;
+}
+.daily-projects .projects .project-card h3 {
+  font-size: 13px;
+  font-weight: 700;
+  color: #1F1F1F;
+}
+.daily-projects .projects .project-card .Status h3 {
+  padding: 6px 10px;
+  border-radius: 5px;  
+}
+.daily-projects .projects .project-card .Status .active {
+  color: #72BB74;
+  background-color: #F4FFF4;
+
+}
+.daily-projects .projects .project-card .Status .delivered {
+  background-color: #FFF9E2;
+  color: #F9C302;
+
+}
+.daily-projects .projects .project-card .Status .Rejected {
+  color: #F95702;
+  background-color: #FFF5F0;
+
+}
+.daily-projects .projects .project-card .Requirements div {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.daily-projects .projects .project-card .Requirements div img {
+  width: 20px;
+}
+
+/* ========= End Daily Projects =========*/
+
+/* ========= Start Top Clients =========*/
+section.top-clients {
+  background-color: #ffffffab;
+  padding: 25px;
+  display:flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.top-clients .settings {
+  display: flex;
+  justify-content: flex-end;
+  gap: 20px;
+}
+.top-clients .settings .power,
+.top-clients .settings .notification {
+  padding: 20px;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.top-clients .settings .power {
+  background-color: #72bb7415;
+}
+.top-clients .settings .power img {
+  width: 15px;
+}
+.top-clients .settings .notification {
+  background-color: #fff1ea47;
+}
+.top-clients .settings .notification img {
+  width: 20px;
+}
+.top-clients .settings .profile {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: #f7f7f7a8;
+  padding: 10px 40px 10px 10px;
+  border-radius: 15px;
+  position: relative;
+}
+.top-clients .settings .profile img {
+  width: 40px;
+}
+.top-clients .settings .profile h2 {
+  font-weight: 500;
+  font-size: 16px;
+}
+.top-clients .settings .profile .arrow,
+.top-clients .title .filter h3::before {
+  position: absolute;
+  top: 50%;
+  right: 12px;
+  width: 0;
+  height: 0;
+  transform: translateY(-5px);
+  border: 9px solid transparent;
+  border-top-color: #1F1F1F;
+  border-radius: 5px;
+}
+.top-clients .settings .menu {
+  position: relative;
+  width: 40px;
+}
+.top-clients .settings .menu div {
+  width: 40px;
+  height: 5px;
+  background-color: #fff;
+  border-radius: 5px;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+}
+.top-clients .settings .menu div::before, 
+.top-clients .settings .menu div::after {
+  content: '';
+  width: 50%;
+  height: 5px;
+  border-radius: 5px;
+  background-color: #fff;
+  position: absolute;
+}
+.top-clients .settings .menu div::before {
+  right: 0;
+  top: -15px;
+}
+.top-clients .settings .menu div::after {
+  left: 0;
+  bottom: -15px;
+}
+.top-clients .top-clients {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.top-clients .top-clients .title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+.top-clients .top-clients .title::before {
+  content: '';
+  width: 100%;
+  height: 1.5px;
+  background-color: #fff;
+  position: absolute;
+  bottom: -10px;
+  opacity: 50%;
+}
+.top-clients .top-clients .title h2 {
+  color:#1F1F1F;
+  font-size: 21px;
+}
+.top-clients .top-clients .title .filter h3 {
+  color: #34414D;
+  font-size: 16px;
+  font-weight: 500;
+  padding-right: 25px;
+  position: relative;
+}
+.top-clients .top-clients .title .filter h3::before {
+  content: '';
+  border-top-color: #34414D;
+  right: 0;
+}
+.top-clients .client-data {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(166px, 1fr));
+  gap: 20px;
+  overflow-y: scroll;
+  max-height: 465px;
+  padding-right: 8px;
+}
+.top-clients .client-data .card {
+  padding: 15px 10px;
+  border-radius: 13px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+}
+.top-clients .client-data .card img {
+  width: 80px;
+}
+.top-clients .client-data .card h2 {
+  font-size: 19px;
+  font-weight: 500;
+  color: #1F1F1F;
+}
+.top-clients .client-data .card .info {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+}
+.top-clients .client-data .card .info h3 {
+  color: #A7B1BD;
+  font-size: 9px;
+  font-weight: 400;
+}
+
+.top-clients .client-data .card .info .completed-projects {
+  position: relative;
+}
+.top-clients .client-data .card .info .completed-projects::before {
+  content: "";
+  width: 2px;
+  height: 100%;
+  background-color: #E2E2E2;
+  position: absolute;
+  right: -8px;
+}
+.top-clients .client-data .card .info span {
+  color: #505D68;
+  font-size: 10px;
+}
+.top-clients .client-data .card button {
+  padding: 10px 20px;
+  border-radius: 7px;
+  border: none;
+  background-color: #fff;
+  font-size: 11px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.top-clients .client-data .card.pixelerr {
+  background-color: #FFF9E2;
+}
+.top-clients .client-data .card.pixelerr button {
+  color: #F9C302;
+}
+.top-clients .client-data .card.google {
+  background-color: #FFF5F0;
+}
+.top-clients .client-data .card.google button {
+  color: #F95702;
+}
+.top-clients .client-data .card.intercom {
+  background-color: #F4FFF4;
+}
+.top-clients .client-data .card.intercom button {
+  color: #72BB74;
+}
+.top-clients .client-data .card.asana {
+  background-color: #E2F6FF;
+}
+.top-clients .client-data .card.asana button {
+  color: #3BC2FF;
+}
+.top-clients .client-data .card.facebook {
+  background-color: #F0F0FF;
+}
+.top-clients .client-data .card.facebook button {
+  color: #4E4EFF;
+}
+.top-clients .client-data .card.twitter {
+  background-color: #FDF4FF;
+}
+.top-clients .client-data .card.twitter button {
+  color: #DD43FF;
+}
+.top-clients .client-data .card.unsplash {
+  background-color: #FFF9E2;
+}
+.top-clients .client-data .card.unsplash button {
+  color: #F9C302;
+}
+.top-clients .client-data .card.sunrise {
+  background-color: #FFF5F0;
+}
+.top-clients .client-data .card.sunrise button {
+  color: #F95702;
+}
+.top-clients .client-data .card.starbucks {
+  background-color: #F4FFF4;
+}
+.top-clients .client-data .card.starbucks button {
+  color: #72BB74;
+}
+.top-clients .client-data .card.tesla {
+  background-color: #E2F6FF;
+}
+.top-clients .client-data .card.tesla button {
+  color: #3BC2FF;
+}
+.top-clients .client-data .card.spacex {
+  background-color: #F0F0FF;
+}
+.top-clients .client-data .card.spacex button {
+  color: #4E4EFF;
+}
+.top-clients .client-data .card.nasa {
+  background-color: #FDF4FF;
+}
+.top-clients .client-data .card.nasa button {
+  color: #DD43FF;
+}
+
+/* ========= End Top Clients =========*/
